@@ -63,5 +63,14 @@ h1 {
 }
 
 .count .grid > a > input {
-    display: initial;
+    display: inline;
+}
+
+.result {
+    display: none;
+    margin-top: 1rem;
+}
+
+.count .result {
+    display: block;
 }

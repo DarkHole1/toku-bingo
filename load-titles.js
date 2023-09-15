@@ -5,6 +5,7 @@ let count = 0
 
 window.addEventListener('load', () => {
     const main = document.getElementById('main')
+    const result = document.getElementById('result')
     const fragment = document.createDocumentFragment()
     for(const title of titles) {
         const a = document.createElement('a')
@@ -30,8 +31,16 @@ window.addEventListener('load', () => {
         fragment.appendChild(a)
     }
     main.appendChild(fragment)
-})
 
-function updateCount() {
-    // TODO
-}
+    function updateCount() {
+        if(count == 0) {
+            result.innerText = 'Результат: Абсолютный ноль'
+            return
+        }
+        if(count < 60) {
+            result.innerText = `Результат: ${count}/60`
+            return
+        }
+        result.innerText = 'Результат: Никто не обнимет необъятного'
+    }
+})
