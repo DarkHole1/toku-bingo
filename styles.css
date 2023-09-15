@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    background-color: #1e0400;
+    color: #a03939;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+a {
+    color: #a03939;
+}
+
+.header {
+    background-color: #822139;
+    color: #f4e5e5;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+.text {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    justify-items: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
