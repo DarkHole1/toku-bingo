@@ -27,11 +27,17 @@ h1 {
     text-align: center;
 }
 
+.helper {
+    margin: 0.5rem;
+}
+
 .footer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .grid {
