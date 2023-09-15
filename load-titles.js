@@ -6,9 +6,10 @@ window.addEventListener('load', () => {
     for(const title of titles) {
         const a = document.createElement('a')
         a.href = title.url
-        const img = document.createElement('img')
-        img.src = title.image
-        a.appendChild(img)
+        a.style.backgroundImage = `url("${title.image}")`
+        // const img = document.createElement('img')
+        // img.src = title.image
+        // a.appendChild(img)
         fragment.appendChild(a)
     }
     main.appendChild(fragment)
