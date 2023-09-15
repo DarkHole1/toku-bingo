@@ -7,6 +7,8 @@ window.addEventListener('load', () => {
     const main = document.getElementById('main')
     const result = document.getElementById('result')
     const toggler = document.getElementById('toggler')
+    const rem = parseFloat(getComputedStyle(document.documentElement).fontSize)
+
     const fragment = document.createDocumentFragment()
     for (const title of titles) {
         const a = document.createElement('a')
@@ -57,13 +59,13 @@ window.addEventListener('load', () => {
 
     function hasBingo() {
         const { width } = document.body.getBoundingClientRect()
-        const cols = Math.floor(width / 160)
+        const cols = Math.floor((width - rem) / (160 + rem))
         const rows = Math.ceil(60 / cols)
         const els = main.querySelectorAll('a > input')
         
         const vertical = new Array(cols).fill(0)
         for (let i = 0; i < 60; i += cols) {
-            for(let j; i < cols; j++) {
+            for(let j = 0; j < cols; j++) {
                 if(els[i + j] && els[i + j].checked) {
                     vertical[j]++
                     if(vertical[j] >= 5) {
