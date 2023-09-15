@@ -7,9 +7,9 @@ window.addEventListener('load', () => {
         const a = document.createElement('a')
         a.href = title.url
         a.style.backgroundImage = `url("${title.image}")`
-        // const img = document.createElement('img')
-        // img.src = title.image
-        // a.appendChild(img)
+        const input = document.createElement('input')
+        input.type = 'checkbox'
+        a.appendChild(input)
         fragment.appendChild(a)
     }
     main.appendChild(fragment)

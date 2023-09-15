@@ -57,3 +57,11 @@ h1 {
     background-size: cover;
     background-position: center;
 }
+
+.grid > a > input {
+    display: none;
+}
+
+.grid.count > a > input {
+    display: initial;
+}
