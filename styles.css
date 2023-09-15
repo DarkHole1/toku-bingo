@@ -62,6 +62,6 @@ h1 {
     display: none;
 }
 
-.grid.count > a > input {
+.count .grid > a > input {
     display: initial;
 }
