@@ -81,15 +81,15 @@ h1 {
     display: block;
     width: 15rem;
     left: calc(50% - 15rem / 2);
-    bottom: 2rem;
+    top: 2rem;
     background-color: #822139;
     font-size: 4rem;
     font-weight: bold;
     color: #f4e5e5;
     text-align: center;
-    transition: 0.5s all;
+    transition: 0.2s all;
 }
 
 .hidden#bingo {
-    bottom: -5rem;
+    top: -5rem;
 }

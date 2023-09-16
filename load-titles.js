@@ -7,6 +7,7 @@ window.addEventListener('load', () => {
     const main = document.getElementById('main')
     const result = document.getElementById('result')
     const toggler = document.getElementById('toggler')
+    const bingo = document.getElementById('bingo')
     const rem = parseFloat(getComputedStyle(document.documentElement).fontSize)
 
     const fragment = document.createDocumentFragment()
@@ -36,7 +37,7 @@ window.addEventListener('load', () => {
     main.appendChild(fragment)
 
     function updateCount() {
-        console.log(hasBingo())
+        updateBingo()
         if (count == 0) {
             result.innerText = 'Результат: Абсолютный ноль'
             return
@@ -46,6 +47,14 @@ window.addEventListener('load', () => {
             return
         }
         result.innerText = 'Результат: Никто не обнимет необъятного'
+    }
+
+    window.addEventListener('resize', () => {
+        updateBingo()
+    })
+
+    function updateBingo() {
+        bingo.classList.toggle('hidden', !hasBingo())
     }
 
     toggler.addEventListener('click', () => {
